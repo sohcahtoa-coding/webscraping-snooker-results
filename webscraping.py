@@ -221,6 +221,11 @@ while True:
         continue
     break
 
+# Initialising results.csv file
+filename = open('results.csv', 'w')
+print("Winner, Loser, Result, W-odds, L-odds, Year, Tournament", file=filename)
+filename.close()
+
 print("Generating list of tournament URLs...")
 time.sleep(5)
 element_list = driver.find_elements(By.XPATH, value='//*[@id="col-content"]/div[*]/table/tbody/tr[*]/td[*]/a')
