@@ -274,6 +274,10 @@ for url_cnt in range(0, element_list_length):
 
     for season_cnt in range(0, season_elements_length):
         print("Accessing season:", season_links_list[season_cnt])
+
+        if "/" in season_name_list[season_cnt]:
+            season_name_list[season_cnt] = season_name_list[season_cnt][0:4]
+
         print("Season Name = ", season_name_list[season_cnt])
         if season_cnt != 0:
 
